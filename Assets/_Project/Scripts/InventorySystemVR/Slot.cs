@@ -61,6 +61,8 @@ public class Slot : MonoBehaviour
 
    private void InsertItem(Item item)
    {
+      if (itemInSlot != null) return;
+
       item.ResetRigidbody();
       item.transform.SetParent(transform, true);
       item.transform.localPosition = Vector3.zero;
