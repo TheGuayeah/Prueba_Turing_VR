@@ -4,8 +4,6 @@ using UnityEngine;
 public class InventoryVR : MonoBehaviour
 {
    [SerializeField]
-   private GameInput gameInput;
-   [SerializeField]
    private GameObject inventory;
    [SerializeField]
    private GameObject anchor;
@@ -20,7 +18,7 @@ public class InventoryVR : MonoBehaviour
 
    private void Start()
    {
-      gameInput.OnPrimaryBtnAction += GameInput_OnPrimaryBtnAction;
+      GameInput.Instance.OnPrimaryBtnAction += GameInput_OnPrimaryBtnAction;
    }
 
    private void GameInput_OnPrimaryBtnAction(object sender, EventArgs e)

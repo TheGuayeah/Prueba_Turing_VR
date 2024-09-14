@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class Item : MonoBehaviour
 {
@@ -7,10 +8,12 @@ public class Item : MonoBehaviour
 
    public Vector3 slotRotation = Vector3.zero;
 
-   public void SetSlot(Slot slot)
+   private void Update()
    {
-      currentSlot = slot;
-      isInSlot = true;
+      if (!isInSlot)
+      {
+         SetUp();
+      }
    }
 
    public bool IsInSlot(out Slot slot)
@@ -19,21 +22,25 @@ public class Item : MonoBehaviour
       return isInSlot;
    }
 
-   public Slot GetCurrentSlot()
-   {
-      return currentSlot;
-   }
-
-   public void ClearCurrentSlot()
-   {
-      isInSlot = false;
-      currentSlot = null;
-   }
-
-   public void ResetRigidbody()
+   public void SetUp()
    {
       Rigidbody rigidBody = GetComponent<Rigidbody>();
-      rigidBody.isKinematic = !rigidBody.isKinematic;
-      rigidBody.useGravity = !rigidBody.isKinematic;
+      rigidBody.useGravity = true;
+      rigidBody.isKinematic = false;
+      isInSlot = false;
+      currentSlot = null;
+      transform.SetParent(null);
+   }
+
+   public void Store(Slot slot)
+   {
+      Rigidbody rigidBody = GetComponent<Rigidbody>();
+      rigidBody.useGravity = false;
+      rigidBody.isKinematic = true;
+      transform.SetParent(transform, true);
+      currentSlot = slot;
+      isInSlot = true;
+      transform.localPosition = Vector3.zero;
+      transform.localEulerAngles = slotRotation;
    }
 }

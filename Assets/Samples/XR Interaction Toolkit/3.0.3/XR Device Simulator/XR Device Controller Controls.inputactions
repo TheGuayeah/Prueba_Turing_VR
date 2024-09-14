@@ -27,7 +27,7 @@
                     "name": "Grip",
                     "type": "Button",
                     "id": "c7937c78-cea4-4888-8feb-8d9da13005f2",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -36,7 +36,7 @@
                     "name": "Trigger",
                     "type": "Button",
                     "id": "3808b2c1-2f77-4a89-bc2a-34c0e0ef0ad3",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -45,7 +45,7 @@
                     "name": "Primary Button",
                     "type": "Button",
                     "id": "54068f2e-4569-46ab-9864-63b23fb9c26a",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -291,7 +291,7 @@
                 },
                 {
                     "name": "",
-                    "id": "32072c42-6a30-4383-8362-d65ff475c920",
+                    "id": "ad8efcfd-7553-4ff0-b654-2d064fcb1caf",
                     "path": "<Keyboard>/g",
                     "interactions": "",
                     "processors": "",
@@ -302,7 +302,7 @@
                 },
                 {
                     "name": "",
-                    "id": "4f6dfc4a-38d9-455d-9364-3a188b0e9326",
+                    "id": "0e437931-2e39-449f-bfe3-18a763cc58cd",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
@@ -313,8 +313,30 @@
                 },
                 {
                     "name": "",
-                    "id": "c17eb846-7a66-4006-9d57-6b91831868d0",
+                    "id": "c5b9acfe-de5c-4f0f-8ea4-980b34084183",
                     "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Primary Button",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9e98f166-aac6-4de1-af3a-31862193a0c7",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Primary Button",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6084fb84-4677-4278-99e3-05f03b9e30fe",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -326,6 +348,28 @@
                     "name": "",
                     "id": "69ce3e33-7d81-423f-b162-7232a5791c2f",
                     "path": "<Keyboard>/n",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Secondary Button",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f9a1b776-cb8c-4776-8720-4a794a1c8f2e",
+                    "path": "<XRController>{LeftHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Secondary Button",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aa79a99d-a8d6-4763-a5f3-cd5b09221754",
+                    "path": "<XRController>{RightHand}/{SecondaryButton}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
