@@ -5,7 +5,10 @@ public class HealthSystem : MonoBehaviour
 {
    public event EventHandler OnDead;
    public event EventHandler OnTakeDamage;
+   public event EventHandler OnHeal;
 
+   [SerializeField]
+   private AudioSource healSound;
    [SerializeField]
    private int maxHealth = 100;
 
@@ -28,7 +31,19 @@ public class HealthSystem : MonoBehaviour
       OnTakeDamage?.Invoke(this, EventArgs.Empty);
    }
 
-   
+   public void Heal(int healAmount)
+   {
+      if(health < maxHealth)
+         healSound.Play();
+
+      health += healAmount;
+
+      if (health > maxHealth)
+      {
+         health = maxHealth;
+      }
+      OnHeal?.Invoke(this, EventArgs.Empty);
+   }
 
    public float GetHealthNormalized()
    {
