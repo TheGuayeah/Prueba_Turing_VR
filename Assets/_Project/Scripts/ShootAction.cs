@@ -9,8 +9,6 @@ public class ShootAction : MonoBehaviour
    [SerializeField]
    private Transform bulletPrefab;
    [SerializeField]
-   Transform blasterSpawn;
-   [SerializeField]
    private AudioSource shootSound, jammedSound, reloadSound;
    [SerializeField]
    private int maxAmmo = 5;

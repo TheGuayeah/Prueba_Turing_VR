@@ -14,16 +14,16 @@ Para probar el proyecto sin necesidad de dispositivo he utilizado el prefab `XR 
   - `G` para agarrar un objeto.
   - `R` para alternar entre girar o mover el mando.
   - `B` para abrir el inventario.
-  - `Click Izdo` para interactuar con el mando.
+  - `Click Izdo` para interactuar con los objetos.
 
 ## Interacciones
 
 - En la mesa están los objetos con los que se puede interactuar.
 - Al apuntar un objeto con uno de los mandos y manterner pulsada la tecla `G`, el objeto se traslada hasta la posición del mando.
 - Al soltar la tecla `G` el objeto que hay en la mano se cae al suelo.
-- El arma se utiliza pulsando `Click Izdo` sin dejar de pulsar la tecla `G`.
-- La poción se utiliza lanzándola al enemigo (una caja de color rojo detrás de la mesa).
-- La munición........
+- El arma se utiliza mientras está en la mano, pulsando `Click Izdo`.
+- La poción se utiliza mientras está en la mano, pulsando `Click Izdo`.
+- La munición se recarga mientras el cargador está en la mano, pulsando `Click Izdo`
 
 ## Inventario
 
