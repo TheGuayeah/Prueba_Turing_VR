@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4353118752725327816}
   - component: {fileID: 3121109961641833446}
   m_Layer: 5
-  m_Name: AudioSource
+  m_Name: HealAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

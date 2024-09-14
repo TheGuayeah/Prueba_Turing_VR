@@ -4,25 +4,18 @@ using UnityEngine;
 public class ShootAction : MonoBehaviour
 {
    public event EventHandler OnShoot;
+   public event EventHandler OnReload;
 
    [SerializeField]
    private Transform bulletPrefab;
    [SerializeField]
-   private AudioSource shootSound, jammedSound;
+   Transform blasterSpawn;
+   [SerializeField]
+   private AudioSource shootSound, jammedSound, reloadSound;
    [SerializeField]
    private int maxAmmo = 5;
    [SerializeField]
    private int currentAmmo = 5;
-
-   private void Start()
-   {
-      GameInput.Instance.OnSecondaryBtnAction += GameInput_OnSecondaryBtnAction;
-   }
-
-   private void GameInput_OnSecondaryBtnAction(object sender, EventArgs e)
-   {
-      Reload();
-   }
 
    public void TakeAction(Transform bulletParent)
    {
@@ -44,9 +37,14 @@ public class ShootAction : MonoBehaviour
       OnShoot?.Invoke(this, EventArgs.Empty);
    }
 
-   private void Reload()
+   public void Reload()
    {
+      if (currentAmmo == maxAmmo) return;
+
+      reloadSound.Play();
       currentAmmo = maxAmmo;
+
+      OnReload?.Invoke(this, EventArgs.Empty);
    }
 
    public int GetCurrentAmmo()

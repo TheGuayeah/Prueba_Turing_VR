@@ -22,17 +22,11 @@ public class GameInput : Singleton<GameInput>
       inputActions.Controller.Grip.performed += Grip_performed;
       inputActions.Controller.Grip.canceled += Grip_canceled;
       inputActions.Controller.PrimaryButton.performed += PrimaryButton_performed;
-      inputActions.Controller.SecondaryButton.performed += SecondaryButton_performed;
    }
 
    private void PrimaryButton_performed(InputAction.CallbackContext ctx)
    {
       OnPrimaryBtnAction?.Invoke(this, EventArgs.Empty);
-   }
-
-   private void SecondaryButton_performed(InputAction.CallbackContext context)
-   {
-      OnSecondaryBtnAction?.Invoke(this, EventArgs.Empty);
    }
 
    private void Grip_performed(InputAction.CallbackContext ctx)

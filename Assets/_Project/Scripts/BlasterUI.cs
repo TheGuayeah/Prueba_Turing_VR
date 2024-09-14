@@ -12,9 +12,15 @@ public class BlasterUI : MonoBehaviour
    private void Start()
    {
       shootAction.OnShoot += ShootAction_OnShoot;
+      shootAction.OnReload += ShootAction_OnReload;
    }
 
    private void ShootAction_OnShoot(object sender, EventArgs e)
+   {
+      ammoText.text = shootAction.GetCurrentAmmo().ToString();
+   }
+
+   private void ShootAction_OnReload(object sender, EventArgs e)
    {
       ammoText.text = shootAction.GetCurrentAmmo().ToString();
    }
