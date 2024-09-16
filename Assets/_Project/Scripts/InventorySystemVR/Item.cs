@@ -37,7 +37,7 @@ public class Item : MonoBehaviour
       Rigidbody rigidBody = GetComponent<Rigidbody>();
       rigidBody.useGravity = false;
       rigidBody.isKinematic = true;
-      transform.SetParent(transform, true);
+      transform.SetParent(slot.transform, true);
       currentSlot = slot;
       isInSlot = true;
       transform.localPosition = Vector3.zero;
