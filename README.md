@@ -1,6 +1,6 @@
 # Prueba Turing VR
  
-Para probar el proyecto sin necesidad de dispositivo he utilizado el prefab `XR Device Simulator`, pero debería funcionar igualmente conectando unas Meta Quest.
+Para probar el proyecto sin necesidad de dispositivo he utilizado el prefab `XR Device Simulator`, pero debería funcionar igualmente conectando unas Meta Quest cambiando los inputs.
 
 ## Controles del simulador
 
